@@ -6,7 +6,6 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
-	var response;
 	var inputType;
 
 	// figure out what type of statement we're getting
@@ -41,19 +40,17 @@ Bob.prototype.hey = function(input) {
 
 	switch (inputType){
 		case 'question':
-			response = 'Sure.';
+			return 'Sure.';
 			break;
 		case 'yelling':
 			return 'Woah, chill out!';
 			break;
 		case 'silence':
-			response = 'Fine. Be that way!';
+			return 'Fine. Be that way!';
 			break;
 		default:
-			response = 'Whatever.';
+			return 'Whatever.';
 	}
-
-	return response;
 };
 
 module.exports = Bob;
