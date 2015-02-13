@@ -6,12 +6,12 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
+	input = input.trim();
 	var inputType;
 
 	// figure out what type of statement we're getting
 	var inflectionChar = (input.slice(-1));
 	var onlyNumbers = /^[0-9 ,]*.$/.test(input);
-	var onlyWhitespace = /^[ ]*$/.test(input);
 	var onlyUpcase = (input === input.toUpperCase());
 
 	if (inflectionChar == '!') {
@@ -34,7 +34,7 @@ Bob.prototype.hey = function(input) {
 		inputType = 'question';
 	}
 
-	if (onlyWhitespace === true){
+	if (input === ''){
 		inputType = 'silence';
 	}
 
