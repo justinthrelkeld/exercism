@@ -14,10 +14,6 @@ Bob.prototype.hey = function(input) {
 	var onlyNumbers = /^[0-9 ,]*.$/.test(input);
 	var onlyUpcase = (input === input.toUpperCase());
 
-	if (inflectionChar == '!') {
-		inputType = 'exclaiming';
-	};
-
 	if (inflectionChar == '?') {
 		inputType = 'question';
 	};
