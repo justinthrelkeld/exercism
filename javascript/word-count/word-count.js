@@ -1,6 +1,5 @@
 var words = function(text){
-	text = text.replace(/\s+/g, ' ');
-	text = text.split(' ');
+	text = text.split(/\s+/g);
 	var words = {};
 	text.forEach(function(word){
 		if (word !== ''){
