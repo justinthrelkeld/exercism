@@ -1,5 +1,4 @@
 var words = function(text){
-	text.trim()
 	text = text.split(/\s+/g);
 	var words = {};
 	text.forEach(function(word){
