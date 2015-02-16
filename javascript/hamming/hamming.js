@@ -9,9 +9,7 @@ Hamming.compute = function(a, b){
 		a = a.split('');
 		b = b.split('');
 		a.forEach(function(val, i){
-			if (a[i] !== b[i]){
-				delta++;
-			}
+			(a[i] !== b[i]) ? delta++ : delta;
 		})
 	}
 	return delta;
