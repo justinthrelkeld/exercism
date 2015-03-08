@@ -105,5 +105,10 @@ class BobTests(unittest.TestCase):
             'Fine. Be that way!', self.bob.hey('    ')
         )
 
+    def test_ends_with_whitespace(self):
+        self.assertEqual(
+            'Sure.', self.bob.hey('What if we end with whitespace?   ')
+        )
+
 if __name__ == '__main__':
     unittest.main()

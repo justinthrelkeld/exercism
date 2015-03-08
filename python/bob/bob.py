@@ -7,7 +7,7 @@ class Bob:
       response = "Whatever."
       if message.isupper():
         response = "Woah, chill out!"
-      elif message.endswith("?"):
+      elif message.strip().endswith("?"):
         response = "Sure."
       elif message.strip() == "":
         response = "Fine. Be that way!"
